@@ -1,0 +1,177 @@
+/* AdminPanel.css */
+
+.admin-panel {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fbfc;
+  min-height: 100vh;
+  color: #333;
+}
+
+.panel-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Layout: Table + Details side by side */
+.table-and-details {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Table styling */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  flex: 1 1 600px;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 500px;
+}
+
+.admin-table thead {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  text-align: left;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f1f7fe;
+}
+
+/* Role badges */
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  background-color: #ddd;
+  color: #333;
+}
+
+.role-badge.admin {
+  background-color: #1976d2;
+  color: white;
+}
+
+.role-badge.normalUser {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn.view {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn.view:hover {
+  background-color: #388e3c;
+}
+
+.btn.update {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn.update:hover {
+  background-color: #0d47a1;
+}
+
+.btn.clear {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.btn.clear:hover {
+  background-color: #616161;
+}
+
+/* Details box */
+.details-box {
+  background-color: #fff;
+  border-left: 6px solid #1976d2;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  max-width: 620px;
+  overflow-x: auto;
+  flex: 1 1 300px;
+}
+
+.details-box h4 {
+  margin-top: 0;
+  color: #1976d2;
+  margin-bottom: 0.5rem;
+}
+
+/* Error message */
+.error {
+  color: red;
+  background-color: #ffe6e6;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-weight: 500;
+  border-left: 6px solid red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-and-details {
+    flex-direction: column;
+  }
+
+  .details-box {
+    max-width: 100%;
+  }
+}

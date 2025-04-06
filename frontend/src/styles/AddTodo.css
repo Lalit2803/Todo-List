@@ -1,0 +1,106 @@
+.addtodo-container {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .addtodo-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding:15px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .addtodo-card:hover {
+    transform: scale(1.01);
+  }
+  
+  .addtodo-card h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #2e2e2e;
+    letter-spacing: 1px;
+  }
+  
+  .addtodo-message {
+    
+    text-align: center;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 12px 18px;
+    border-left: 6px solid #10b981;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .addtodo-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .addtodo-input,
+  .addtodo-textarea,
+  .addtodo-select {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+  
+  .addtodo-input:focus,
+  .addtodo-textarea:focus,
+  .addtodo-select:focus {
+    border-color: #00bcd4;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.2);
+    outline: none;
+  }
+  
+  .addtodo-textarea {
+    resize: vertical;
+  }
+  
+  .addtodo-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    flex-shrink: 0;
+  }
+  
+  .addtodo-button:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 65, 108, 0.3);
+  }
+  
+  /* Responsive stacking for mobile */
+  @media (max-width: 768px) {
+    .addtodo-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  

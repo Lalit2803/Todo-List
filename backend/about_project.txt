@@ -1,0 +1,17 @@
+normaluser---------------------------------->
+register>> login >> CRUD on todos/ on himself >> logout
+     
+     fetch all todos                                              update his/her details
+     fetch one todos                                              delete his/her details
+     fetch  todo based on priority                                fetch his/her details
+     fetch todo on the basis of due Date                          create an account
+     fetch all todos
+
+
+admin 
+
+
+
+how to upload profile picture
+
+we upload pic on server for temporary period
