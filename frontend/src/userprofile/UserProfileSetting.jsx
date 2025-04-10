@@ -17,7 +17,7 @@ const UserProfileSettings = ({userId}) => {
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:9000/lps/user/updateuserprofile`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/user/updateuserprofile`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const UserProfileSettings = ({userId}) => {
   const handlePasswordUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:9000/lps/user/updatepassword/${userId}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/user/updatepassword/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -59,7 +59,7 @@ const UserProfileSettings = ({userId}) => {
     formData.append("profilePicture", profilePicture);
 
     try {
-      const res = await fetch("http://localhost:9000/lps/user/updateprofilepicture", {
+      const res = await fetch("https://todo-list-backend-deop.onrender.com/lps/user/updateprofilepicture", {
         method: "PATCH",
         credentials: "include",
         body: formData,
@@ -76,7 +76,7 @@ const UserProfileSettings = ({userId}) => {
   // Delete current profile picture
   const handleDeleteProfilePic = async () => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/user/deleteprofilepic`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/user/deleteprofilepic`, {
         method: "PATCH",
         credentials: "include",
       });
