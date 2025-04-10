@@ -10,7 +10,7 @@ export default function AdminPanel() {
 
   const fetchAllUsers = async () => {
     try {
-      const res = await fetch("http://localhost:9000/lps/admin/fetchall", {
+      const res = await fetch("https://todo-list-backend-deop.onrender.com/lps/admin/fetchall", {
         credentials: "include",
       });
       const data = await res.json();
@@ -23,7 +23,7 @@ export default function AdminPanel() {
 
   const fetchUserById = async (id) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/admin/fetchone/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/admin/fetchone/${id}`, {
         credentials: "include",
       });
       const data = await res.json();
@@ -36,7 +36,7 @@ export default function AdminPanel() {
 
   const updateUserRole = async (id, role) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/admin/updaterole/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/admin/updaterole/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -52,7 +52,7 @@ export default function AdminPanel() {
 
   const fetchAllTodos = async () => {
     try {
-      const res = await fetch("http://localhost:9000/lps/admin/fetchalltodo", {
+      const res = await fetch("https://todo-list-backend-deop.onrender.com/lps/admin/fetchalltodo", {
         credentials: "include",
       });
       const data = await res.json();
@@ -65,7 +65,7 @@ export default function AdminPanel() {
 
   const fetchTodoById = async (id) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/admin/fetchonetodo/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/admin/fetchonetodo/${id}`, {
         credentials: "include",
       });
       const data = await res.json();
