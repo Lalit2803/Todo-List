@@ -9,7 +9,7 @@ export default function Navbar() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:9000/lps/user/currentuser", {
+        const res = await fetch("https://todo-list-backend-deop.onrender.com/lps/user/currentuser", {
           method: "GET",
           credentials: "include",
         });
@@ -31,7 +31,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:9000/lps/user/logout", {
+      await fetch("https://todo-list-backend-deop.onrender.com/lps/user/logout", {
         method: "GET",
         credentials: "include",
       });
