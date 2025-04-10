@@ -31,7 +31,7 @@ export default function AddTodo({ userId,onTodoAdded   }) {
     e.preventDefault();
     console.log("Added data is data is :",todoData)
   
-      const response= await fetch("http://localhost:9000/lps/todos/addtodo",{
+      const response= await fetch("https://todo-list-backend-deop.onrender.com/lps/todos/addtodo",{
         method:"POST",
         headers:{
             'Content-type':'application/json'
