@@ -34,7 +34,7 @@ export default function SignupForm() {
   data.append("password", formData.password);
   data.append("profilePicture", formData.profilePicture); // this is the File object
 
-  const response = await fetch("http://localhost:9000/lps/user/register", {
+  const response = await fetch("https://todo-list-backend-deop.onrender.com/lps/user/register", {
     method: "POST",
     body: data, // no need to stringify
   });
