@@ -19,7 +19,7 @@ const TodoListTable = ({ reloadFlag }) => {
 
   const deleteTodo = async (id) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/todos/deletetodo/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/todos/deletetodo/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -33,7 +33,7 @@ const TodoListTable = ({ reloadFlag }) => {
 
   const toggleComplete = async (id, currentStatus) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/todos/updateStatus/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/todos/updateStatus/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -76,7 +76,7 @@ const TodoListTable = ({ reloadFlag }) => {
 
   const saveEdit = async (id) => {
     try {
-      const res = await fetch(`http://localhost:9000/lps/todos/updatetodo/${id}`, {
+      const res = await fetch(`https://todo-list-backend-deop.onrender.com/lps/todos/updatetodo/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -107,7 +107,7 @@ const TodoListTable = ({ reloadFlag }) => {
         if (dueDateSort) params.append("sort", `dueDate_${dueDateSort}`);
 
         const response = await fetch(
-          `http://localhost:9000/lps/todos/alltodo?${params.toString()}`,
+          `https://todo-list-backend-deop.onrender.com/lps/todos/alltodo?${params.toString()}`,
           {
             method: "GET",
             credentials: "include",
