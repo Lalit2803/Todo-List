@@ -41,7 +41,7 @@ exports.fetchAllTodos = asyncHandler(async (req, res) => {
   if(req.query.priority){
     filter.priority=req.query.priority;  // ?priority=low/medium/high
   }
-
+ 
   let sortOption={};
   if(req.query.sort){
     const [field,value]=req.query.sort.split("_"); // ("dueDate","asc")s
@@ -78,9 +78,6 @@ exports.fetchAllTodos = asyncHandler(async (req, res) => {
 
 
 exports.fetchOneTodo = asyncHandler(async (req, res) => {
-
-
-
   let todo = await todoModel.findOne({
     _id: req.params.id,
     createdBy: req.user._id,
@@ -116,8 +113,7 @@ exports.deleteTodo = asyncHandler(async (req, res) => {
   if (!deleteTodo) {
     throw new ErrorHandler(404, "No todos find");
   }
-  await userModel.findByIdAndUpdate(req.user._id,{$inc:{totalNumberOfTask:-1}})
-  
+  await userModel.findByIdAndUpdate(req.user._id,{$inc:{totalNumberOfTask:-1}}) 
   res.status(200).json({ success: true, message: "deleted successfully", deleteTodo });
 });
 

@@ -204,7 +204,8 @@ const TodoListTable = ({ reloadFlag }) => {
             <tr key={todo._id}>
               <td>{index + 1}</td>
 
-              {editingTodo === todo._id ? (
+              {editingTodo === todo._id ?
+               (
                 <>
                   <td>
                     <input
@@ -242,7 +243,9 @@ const TodoListTable = ({ reloadFlag }) => {
                     </select>
                   </td>
                 </>
-              ) : (
+              )
+               :
+                (
                 <>
                   <td>{todo.title}</td>
                   <td>{todo.description}</td>
